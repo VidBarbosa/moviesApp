@@ -1,4 +1,4 @@
-import { RequestInfo, WhiteCard } from '@components/shared/index';
+import { RequestInfo, WhiteCard } from '@components/index';
 import { useAuthStore } from '../../stores';
 
 export const Dashboard = () => {

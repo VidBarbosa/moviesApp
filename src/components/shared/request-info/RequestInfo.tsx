@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { moviesApi } from '@api/movies.api';
+import { authApi } from '@api/auth.api';
 
 export const RequestInfo = () => {
 
@@ -7,7 +7,7 @@ export const RequestInfo = () => {
 
   useEffect(() => {
 
-    moviesApi.get('/auth/private')
+    authApi.get('/auth/profile')
       .then( resp => setInfo(resp.data) )
       .catch( () => setInfo('Error') );
 

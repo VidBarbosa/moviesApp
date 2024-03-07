@@ -1,14 +1,14 @@
 import axios from 'axios';
 import { useAuthStore } from '@stores/index';
 
-const moviesApi = axios.create({
-  baseURL: 'http://localhost:3000/api'
+const authApi = axios.create({
+  baseURL: "https://api.escuelajs.co/api/v1",
 });
 
 
 // Todo: interceptors
 // Leer el store de Zustand
-moviesApi.interceptors.request.use(
+authApi.interceptors.request.use(
   (config) => {
 
     const token = useAuthStore.getState().token;
@@ -23,5 +23,5 @@ moviesApi.interceptors.request.use(
 )
 
 export {
-  moviesApi
+  authApi
 }

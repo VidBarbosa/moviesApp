@@ -11,6 +11,10 @@ Currently, two official plugins are available:
 
 If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
+
+### NOTA:
+La API de autenticación es un api de pruebas y por ende no hace un hash del password como deberia hacerse, para esta prueba tecnica lo hice sí pero un TODO de mejora es implementar APIS que entreguen correctamente los objetos.
+
 - Configure the top-level `parserOptions` property like this:
 
 ```js

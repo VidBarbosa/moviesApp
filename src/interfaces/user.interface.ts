@@ -7,5 +7,5 @@ export interface User {
   isAvaible?: boolean;
   role: string[];
   avatar: string;
-
+  
 }

@@ -8,7 +8,7 @@ import { AuthService } from '@services/auth.service';
 export interface AuthState {
 
   status: AuthStatus;
-  token?: string;
+  access_token?: string;
   user?: User;
 
   loginUser: ( email: string, password: string ) => Promise<void>;
@@ -17,21 +17,21 @@ export interface AuthState {
 }
 
 
-const storeApi: StateCreator<AuthState> = ( set ) => ( {
+const storeApi: StateCreator<AuthState> = ( set, get ) => ( {
 
   status: 'pending',
-  token: undefined,
+  access_token: undefined,
   user: undefined,
 
 
   loginUser: async ( email: string, password: string ) => {
 
     try {
-      const { token, ...user } = await AuthService.login( email, password );
-      set( { status: 'authorized', token, user } );
+      const { access_token, ...user } = await AuthService.login( email, password );
+      set( { status: 'authorized', access_token, user } );
 
     } catch ( error ) {
-      set( { status: 'unauthorized', token: undefined, user: undefined } );
+      set( { status: 'unauthorized', access_token: undefined, user: undefined } );
       throw 'Unauthorized';
     }
 
@@ -40,16 +40,28 @@ const storeApi: StateCreator<AuthState> = ( set ) => ( {
   checkAuthStatus: async () => {
 
     try {
-      const { token, ...user } = await AuthService.checkStatus();
-      set( { status: 'authorized', token, user } );
+      const { access_token, ...user } = await AuthService.checkStatus();
+      set( { status: 'authorized', access_token, user } );
 
     } catch ( error ) {
-      set( { status: 'unauthorized', token: undefined, user: undefined } );
+      set( { status: 'unauthorized', access_token: undefined, user: undefined } );
     }
   },
 
+  profileUser: async () => {
+
+    try {  
+      const { access_token } = await AuthService.profileUser( get().access_token! );
+      set( { access_token } );
+
+    } catch ( error ) {
+      set( { status: 'unauthorized', access_token: undefined, user: undefined } );
+    }
+  },
+
+  
   logoutUser: () => {
-    set( { status: 'unauthorized', token: undefined, user: undefined } );
+    set( { status: 'unauthorized', access_token: undefined, user: undefined } );
   }
 
 } );

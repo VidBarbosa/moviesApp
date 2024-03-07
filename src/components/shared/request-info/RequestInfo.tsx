@@ -7,7 +7,7 @@ export const RequestInfo = () => {
 
   useEffect(() => {
 
-    authApi.get('/auth/profile')
+    authApi.get('/users/3')
       .then( resp => setInfo(resp.data) )
       .catch( () => setInfo('Error') );
 

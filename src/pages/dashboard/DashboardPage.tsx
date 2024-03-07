@@ -1,9 +1,9 @@
 import { RequestInfo, WhiteCard } from '@components/index';
-import { useAuthStore } from '../../stores';
+import { useAuthStore } from '@stores/index';
 
 export const Dashboard = () => {
 
-  const userName = useAuthStore( state => state.user?.fullName || 'No user' );
+  const userName = useAuthStore( state => state.user?.name || 'No user' );
 
   return (
     <>

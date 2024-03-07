@@ -3,5 +3,5 @@
 }
 
 #nav a.active {
-  @apply  bg-blue-800;
+  @apply  text-[#1499C4];
 }

@@ -13,6 +13,7 @@ export interface AuthState {
 
   loginUser: ( email: string, password: string ) => Promise<void>;
   checkAuthStatus: () => Promise<void>;
+  fetchUserProfile: () => Promise<void>;
   logoutUser: () => void;
 }
 
@@ -27,41 +28,39 @@ const storeApi: StateCreator<AuthState> = ( set, get ) => ( {
   loginUser: async ( email: string, password: string ) => {
 
     try {
-      const { access_token, ...user } = await AuthService.login( email, password );
-      set( { status: 'authorized', access_token, user } );
+      const { access_token } = await AuthService.login( email, password );
+      set( { status: 'authorized', access_token } );
+      await get().fetchUserProfile();
 
     } catch ( error ) {
-      set( { status: 'unauthorized', access_token: undefined, user: undefined } );
-      throw 'Unauthorized';
+      set( { status: 'unauthorized', access_token: undefined } );
     }
 
+  },
+
+  fetchUserProfile: async () => {
+    try {
+      const userProfile = await AuthService.profileUser();
+      set({ user: userProfile });
+    } catch (error) {
+      console.error('Error fetching user profile', error);
+    }
   },
 
   checkAuthStatus: async () => {
 
     try {
-      const { access_token, ...user } = await AuthService.checkStatus();
-      set( { status: 'authorized', access_token, user } );
+      const { access_token } = await AuthService.checkStatus();
+      set( { status: 'authorized', access_token } );
 
     } catch ( error ) {
-      set( { status: 'unauthorized', access_token: undefined, user: undefined } );
+      set( { status: 'unauthorized', access_token: undefined } );
     }
   },
 
-  profileUser: async () => {
 
-    try {  
-      const { access_token } = await AuthService.profileUser( get().access_token! );
-      set( { access_token } );
-
-    } catch ( error ) {
-      set( { status: 'unauthorized', access_token: undefined, user: undefined } );
-    }
-  },
-
-  
   logoutUser: () => {
-    set( { status: 'unauthorized', access_token: undefined, user: undefined } );
+    set( { status: 'unauthorized', access_token: undefined } );
   }
 
 } );

@@ -3,18 +3,11 @@
 
 import { AxiosError } from 'axios';
 import { authApi } from '@api/auth.api';
+import { User } from '@interfaces/auth/user.interface';
 
 export interface LoginResponse {
-  id:       string;
-  email:    string;
-  password: string;
-  name:     string;
-  isAvailable: boolean;
-  role:     string[];
-  avatar:   string;
-  access_token:    string;
+  access_token: string;
 }
-
 
 export class AuthService {
 
@@ -52,25 +45,22 @@ export class AuthService {
     }
   }
 
-  static profileUser = async (access_token: string): Promise<LoginResponse> => {
+  static profileUser = async():Promise<User> => {
+
     try {
-      const { data } = await authApi.get<LoginResponse>('/auth/profile', {
-        headers: {
-          'Authorization': `Bearer ${access_token}`
-        }
-      });
+      const { data } = await authApi.get<User>('/auth/profile');
       console.log(data);
       return data;
+
     } catch (error) {
-      console.log(error);
+      console.error(error);
       if (error instanceof AxiosError && error.response) {
-        throw new Error(error.response.data.message || 'UnAuthorized');
+        throw new Error(error.response.data.message);
       } else {
         throw new Error('UnAuthorized');
       }
     }
-  };
-
+  }
 
 }
 

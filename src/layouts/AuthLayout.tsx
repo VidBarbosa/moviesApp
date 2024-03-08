@@ -22,14 +22,14 @@ export const AuthLayout = () => {
       >
         <div className=" bg-black opacity-20 inset-0 z-0"></div>
         <div className="w-full mx-auto px-20 flex-col items-center space-y-6">
-          <h1 className="text-white font-bold text-4xl font-sans">Simple App</h1>
-          <p className="text-white mt-1">The simplest app to use</p>
+          <h1 className="text-white font-bold text-4xl font-sans">Movies App</h1>
+          <p className="text-white mt-1">Una app sencilla de usar</p>
           <div className="flex justify-center lg:justify-start mt-6">
             <a
-              href="#"
-              className="hover:bg-indigo-700 hover:text-white hover:-translate-y-1 transition-all duration-500 bg-white text-indigo-800 mt-4 px-4 py-2 rounded-2xl font-bold mb-2"
+              href="/"
+              className="hover:bg-indigo-700 hover:text-white hover:-translate-y-1 transition-all duration-500 bg-white text-indigo-800 mt-4 px-4 py-2 rounded-xl font-bold mb-2"
             >
-              Get Started
+              Inicia Ahora
             </a>
           </div>
         </div>

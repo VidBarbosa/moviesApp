@@ -24,5 +24,6 @@ input:not(.swal2-input)[type=text],input:not(.swal2-input)[type=password], input
 }
 
 .login_img_section {
-  background: linear-gradient(rgba(2,2,2,.7),rgba(0,0,0,.7)),url(https://images.unsplash.com/photo-1650825556125-060e52d40bd0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80) center center;
+  background: linear-gradient(rgba(2,2,2,.7),rgba(0,0,0,.7)),url(https://e1.pxfuel.com/desktop-wallpaper/359/804/desktop-wallpaper-marvel-mcu-movie-collage-poster-marvel-entertainment.jpg) center center;
+
 }

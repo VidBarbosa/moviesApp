@@ -24,17 +24,10 @@ export const AuthLayout = () => {
         <div className="w-full mx-auto px-20 flex-col items-center space-y-6">
           <h1 className="text-white font-bold text-4xl font-sans">Movies App</h1>
           <p className="text-white mt-1">Una app sencilla de usar</p>
-          <div className="flex justify-center lg:justify-start mt-6">
-            <a
-              href="/"
-              className="hover:bg-indigo-700 hover:text-white hover:-translate-y-1 transition-all duration-500 bg-white text-indigo-800 mt-4 px-4 py-2 rounded-xl font-bold mb-2"
-            >
-              Inicia Ahora
-            </a>
-          </div>
+          <div className="flex justify-center lg:justify-start mt-6"></div>
         </div>
       </div>
-      <div className="flex flex-col w-full lg:w-1/2 justify-center items-center bg-white space-y-2">
+      <div className="flex flex-col w-full lg:w-1/2 justify-center items-center bg-gradient-to-b from-[#12141C] to-black space-y-2">
         <Outlet />
       </div>
     </div>

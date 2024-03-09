@@ -1,34 +1,27 @@
-import { SideMenu } from '@components/shared/sidemenu/SideMenu';
-import { Navigate, Outlet } from 'react-router-dom';
-import { useAuthStore } from '../stores';
+import { useState } from "react";
+import { Navigate, Outlet } from "react-router-dom";
+import { useAuthStore } from "@stores/index";
+import { HeaderMenu, SideMenu } from "@components/index";
 
 export const DashboardLayout = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const authStatus = useAuthStore((state) => state.status);
 
-  const authStatus = useAuthStore( state => state.status );
-  const checkAuthStatus = useAuthStore( state => state.checkAuthStatus );
-
-  if ( authStatus === 'pending' ) {
-    checkAuthStatus();
-    return <>Loading...</>
+  if (authStatus === "pending") {
+    return <p>Loading...</p>;
   }
 
-  if ( authStatus === 'unauthorized' ) {
-    return <Navigate to='/auth/login' />
+  if (authStatus === "unauthorized") {
+    return <Navigate to="/auth/login" />;
   }
-
-
 
   return (
-    <div className="bg-slate-200 overflow-y-scroll w-screen h-screen antialiased text-slate-900 selection:bg-blue-900 selection:text-white">
-      <div className="flex flex-row relative w-full">
-        <SideMenu />
-
-        <div className="w-full p-4">
-          <Outlet />
-        </div>
-
-      </div>
-
+    <div className="bg-gradient-to-b from-[#12141C] to-black overflow-y-scroll w-screen h-screen antialiased text-slate-900 selection:bg-blue-900 selection:text-white">
+      <HeaderMenu />
+      <SideMenu isOpen={isMenuOpen} setIsOpen={setIsMenuOpen} />
+      <main className={`flex-grow p-4 mt-16 ${isMenuOpen ? "ml-[12.5rem]" : "ml-0"}`}>
+        <Outlet />
+      </main>
     </div>
   );
 };

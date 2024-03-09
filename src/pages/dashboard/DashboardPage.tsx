@@ -1,54 +1,31 @@
-import { RequestInfo, WhiteCard } from '@components/index';
-import { useAuthStore } from '@stores/index';
+import { useEffect, useState } from "react";
+import { CarouselItems, MoviesCard } from "@components/index";
+import { moviesApi } from "@api/movies.api";
+import { Movie } from "@interfaces/index";
 
 export const Dashboard = () => {
+  const [movies, setMovies] = useState<Movie[]>([]);
 
-  const userName = useAuthStore( state => state.user?.name || 'No user' );
+  useEffect(() => {
+    const fetchMovies = async () => {
+      const data = await moviesApi.fetchMovies();
+      setMovies(data);
+    };
+
+    fetchMovies();
+  }, []);
 
   return (
     <>
-      <div className='flex flex-col gap-3 mb-4'>
-        <h1>Dashboard</h1>
-        <p>Información de todas las peliculas del momento</p>
-      </div>
-      <hr />
+      <section className="relative w-full py-52">
+        <CarouselItems />
+      </section>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-
-        <WhiteCard centered>
-          <h2>Osos</h2>
-        </WhiteCard>
-
-
-        <WhiteCard centered>
-          <h2>Persona</h2>
-        </WhiteCard>
-
-
-        <WhiteCard centered>
-          <h2>Tareas</h2>
-        </WhiteCard>
-
-
-        <WhiteCard centered>
-          <h2>Boda</h2>
-          <p>Información</p>
-        </WhiteCard>
-
-
-        <WhiteCard centered>
-          <h2>Auth</h2>
-          <p>{ userName }</p>
-          <span>{ userName }</span>
-        </WhiteCard>
-
-
-        <WhiteCard centered className="col-span-3">
-          <RequestInfo />
-        </WhiteCard>
-
-      </div>
-
+      <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
+        {movies.map((movie) => (
+          <MoviesCard key={movie.id} movie={movie} />
+        ))}
+      </section>
     </>
   );
 };

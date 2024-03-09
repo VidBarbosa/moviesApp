@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "title": "Operación Rescate",
+    "category": "Acción",
+    "summary": "Un ex-agente debe salvar a su familia secuestrada por un sindicato criminal.",
+    "actors": ["John Doe", "Jane Smith"],
+    "image": "https://image.tmdb.org/t/p/original/cPRUqSXVzTF5pprezqi5NZPr9Kt.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Los increibles",
+    "category": "Infantil",
+    "summary": "Un superhéroe retirado lucha contra el aburrimiento y, junto a su familia, tiene la oportunidad de salvar al mundo.",
+    "actors": ["Craig T. Nelson", "Holly Hunter"],
+    "image": "https://www.originalfilmart.com/cdn/shop/products/incredibles_2004_advance_original_film_art_5000x.jpg?v=1580632748"
+  },
+  {
+    "id": 3,
+    "title": "Con todos menos contigo",
+    "category": "Romance",
+    "summary": "DBea y Ben, antiguos compañeros de universidad cuya mutua atracción inicial se tornó asco, se encuentran inesperadamente juntos en una boda en Australia y fingen ser la pareja perfecta para mantener las apariencias.",
+    "actors": ["Glen Powell", "Alexandra Shipp"],
+    "image": "https://iowastatedaily.com/wp-content/uploads/2024/01/MV5BNDYzYzc0MDYtMGM2MC00YzNjLWJhMjYtYzJhMWViMjgxZTcwXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_-960x1200.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Terror en la Noche",
+    "category": "Terror",
+    "summary": "Una reportera debe resolver el misterio de una cinta que trae muerte a sus espectadores, antes de que sucumba a su poder.",
+    "actors": ["Naomi Watts", "Davird Dorfman"],
+    "image": "https://m.media-amazon.com/images/M/MV5BYTQzZjhiYjYtNDMzOS00ZjNiLTg2MGMtYWZmYWNjN2U5YTVmXkEyXkFqcGdeQXVyNjI3OTcxOTU@._V1_.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Sinister",
+    "category": "Misterio",
+    "summary": "Ellison Oswald, escritor de historias criminales, está en una mala racha; no ha tenido un éxito en más de 10 años y está desesperado. Cuando descubre una película que muestra las muertes de una familia, él promete resolver el misterio.",
+    "actors": ["Ethan Hawke", "Juliet Rylance"],
+    "image": "https://musicart.xboxlive.com/7/438c2000-0000-0000-0000-000000000002/504/image.jpg?w=1920&h=1080"
+  },
+  {
+    "id": 6,
+    "title": "Dune",
+    "category": "Acción",
+    "summary": "Arrakis, también denominado Dune, se ha convertido en el planeta más importante del universo. A su alrededor comienza una gigantesca lucha por el poder que culmina en una guerra interestelar.",
+    "actors": ["Timothée Chalamet", "Zendaya"],
+    "image": "https://pics.filmaffinity.com/Dune-209834814-mmed.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Ricky Stanicky",
+    "category": "Comedia",
+    "summary": "Tres chicos crean a un amigo imaginario, Ricky Stanicky, para justificar su comportamiento inmaduro. Veinte años después, siguen usándolo como excusa para todo, pero, cuando sus esposas les exigen que se lo presenten, tienen que contratar a un actor que lo interprete.",
+    "actors": ["Zack Efron", "John Cenna"],
+    "image": "https://m.media-amazon.com/images/M/MV5BOTMyYjg2NzMtNmQzZS00YzMxLTkzNDItMTIwODJhZDI1MmY5XkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_FMjpg_UX1000_.jpg"
+  },
+  {
+    "id": 8,
+    "title": "De amor y otras adicciones",
+    "category": "Romance",
+    "summary": "Maggie es una mujer independiente que ha decidido vivir sin ataduras. Pero conoce a Jamie, un joven cuyo irresistible encanto funciona no solo con las mujeres, sino también dentro del mundo de las ventas farmacéuticas.",
+    "actors": ["Jake Gyllenhaal", "Anne Hathaway"],
+    "image": "https://m.media-amazon.com/images/I/5187FF5eV5L._AC_UF894,1000_QL80_.jpg"
+  },
+  {
+    "id": 9,
+    "title": "The House",
+    "category": "Terror",
+    "summary": "The House es una película animada en stop-motion de 2022 que cuenta tres historias diferentes en torno a una misma casa, que abarca distintos periodos de tiempo y personajes.",
+    "actors": ["Tomás Terror", "Natalia Noche"],
+    "image": "https://image.tmdb.org/t/p/original/iZjMFSKCrleKolC1gYcz5Rs8bk1.jpg"
+  },
+  {
+    "id": 10,
+    "title": "Secretos del Pasado",
+    "category": "Misterio",
+    "summary": "Una periodista investiga su linaje familiar, descubriendo secretos que cambiarán su vida.",
+    "actors": ["Mia Goth", "Helena Bonham Carter"],
+    "image": "https://image.tmdb.org/t/p/original/5i4gbUpu91tIHoUvrgu3EXzcQEX.jpg"
+  },
+  {
+    "id": 11,
+    "title": "Carrera Contra el Tiempo",
+    "category": "Acción",
+    "summary": "Deacon, un agente de las fuerzas de élite, ya retirado, viaja a China para donar uno de sus riñones a sus sobrina. Sin embargo, cae en la red de una mafia dedicada al robo de órganos. Ahora, para salvar la vida de su sobrina, tiene que capturar a los traficantes.",
+    "actors": ["Ricardo Veloz", "Elena Rápida"],
+    "image": "https://image.tmdb.org/t/p/w500/lhueuMuA1YELzw8xAFUevEKW6iG.jpg"
+  },
+  {
+    "id": 12,
+    "title": "Chicas armadas y peligrosas",
+    "category": "Comedia",
+    "summary": "La agente especial del FBI, Sarah Ashburn, es una metódica investigadora con una larga reputación. En contraste, la temperamental detective Shannon Mullins utiliza sus instintos e inteligencia para sacar a los criminales de las calles de Boston.",
+    "actors": ["Sandra Bullock", "Melissa McCarthy"],
+    "image": "https://hacerselacritica.com/wp-content/uploads/2013/09/8948383193_08ac93e4eb_o3.jpg"
+  }
+]

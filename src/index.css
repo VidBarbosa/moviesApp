@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-family: 'Montserrat Variable', sans-serif;
+}
 
 h1 {
   @apply text-3xl font-bold text-gray-800;
@@ -11,14 +14,6 @@ h2 {
   @apply text-2xl font-semibold text-gray-800;
 }
 
-hr {
-  @apply my-1 border-gray-300 border mb-3;
-}
-
-button {
-  @apply transition-all hover:bg-indigo-800 bg-indigo-600 px-8 py-2 rounded-xl text-gray-100 font-semibold uppercase tracking-wide shadow-md;
-}
-
 input:not(.swal2-input)[type=text],input:not(.swal2-input)[type=password], input:not(.swal2-input)[type=email], input:not(.swal2-input)[type=number], input:not(.swal2-input)[type=date], input:not(.swal2-input)[type=time]  {
   @apply w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:border-blue-500;
 }
@@ -26,4 +21,17 @@ input:not(.swal2-input)[type=text],input:not(.swal2-input)[type=password], input
 .login_img_section {
   background: linear-gradient(rgba(2,2,2,.7),rgba(0,0,0,.7)),url(https://e1.pxfuel.com/desktop-wallpaper/359/804/desktop-wallpaper-marvel-mcu-movie-collage-poster-marvel-entertainment.jpg) center center;
 
+}
+
+.text__glowing {
+  transition: text-shadow 0.3s ease;
+}
+
+.text__glowing:hover {
+  text-shadow:
+    0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 40px #fff,
+    0 0 80px #fff,
+    0 0 120px #fff;
 }

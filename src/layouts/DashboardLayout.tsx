@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Navigate, Outlet } from "react-router-dom";
 import { useAuthStore } from "@stores/index";
-import { HeaderMenu, SideMenu } from "@components/index";
+import { HeaderMenu, SideMenu, Footer } from "@components/index";
 
 export const DashboardLayout = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,12 +16,13 @@ export const DashboardLayout = () => {
   }
 
   return (
-    <div className="bg-gradient-to-b from-[#12141C] to-black overflow-y-scroll w-screen h-screen antialiased text-slate-900 selection:bg-blue-900 selection:text-white">
+    <main className="bg-gradient-to-b from-[#12141C] to-black overflow-y-scroll w-screen h-screen antialiased text-slate-900 selection:bg-blue-900 selection:text-white">
       <HeaderMenu />
       <SideMenu isOpen={isMenuOpen} setIsOpen={setIsMenuOpen} />
-      <main className={`flex-grow p-4 mt-16 ${isMenuOpen ? "ml-[12.5rem]" : "ml-0"}`}>
+      <section className={`flex-grow p-4 mt-16 ${isMenuOpen ? "ml-[12.5rem]" : "ml-0"}`}>
         <Outlet />
-      </main>
-    </div>
+        <Footer />
+      </section>
+    </main>
   );
 };

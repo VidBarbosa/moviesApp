@@ -1,18 +1,20 @@
 import { FC, ReactElement } from 'react';
+import { Link } from 'react-router-dom';
 
 interface HeaderMenuItemProps {
   icon?: ReactElement;
   label: string;
-  href: string;
+  to: string;
 }
 
-const HeaderMenuItem: FC<HeaderMenuItemProps> = ({ icon, label, href }) => {
+const HeaderMenuItem: FC<HeaderMenuItemProps> = ({ icon, label, to }) => {
   return (
     <li>
-      <a className="flex items-center justify-center gap-x-1 text__glowing hover:scale-105 transition-transform duration-500 ease-in-out" href={href}>
-        {icon} 
+      {/* Utiliza `to` para especificar el destino del enlace */}
+      <Link to={to} className="flex items-center justify-center gap-x-1 text__glowing hover:scale-105 transition-transform duration-500 ease-in-out">
+        {icon}
         {label}
-      </a>
+      </Link>
     </li>
   );
 };

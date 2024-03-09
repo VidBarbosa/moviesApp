@@ -1,34 +1,25 @@
-# React + TypeScript + Vite
+Para este proyecto, hemos emprendido un viaje desafiante para construir una experiencia de usuario similar a una plataforma de streaming, utilizando tecnologías modernas como React, TypeScript y Vite. Optamos por Zustand sobre Context API o Redux por su simplicidad y rendimiento, permitiéndonos manejar el estado global de nuestra aplicación de manera más eficiente y con menos boilerplate.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Zustand se destaca por ser una solución de manejo de estado ligera y fácil de usar, ideal para proyectos que buscan una configuración mínima y un alto rendimiento. Para aprender más sobre Zustand y cómo integrarlo en tus proyectos, puedes consultar su documentación oficial.
 
-Currently, two official plugins are available:
+Un aspecto importante a destacar es el uso de una API de prueba para autenticación. Aunque no es una práctica recomendada almacenar contraseñas sin hash en localStorage, esta decisión se tomó debido a las limitaciones de la API utilizada. Queremos asegurarnos de que entiendas que esto se hizo exclusivamente con fines demostrativos y educativos.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Para probar la aplicación, puedes utilizar las siguientes cuentas de usuario, seleccionadas al azar de la API de prueba:
 
-## Expanding the ESLint configuration
+Email: john@mail.com, Password: changeme
+Email: maria@mail.com, Password: 12345
+Email: nico@gmail.com, Password: 1234
+Email: sebastian11111@mail.com, Password: 1234
+Email: pshyco89@hotmail.com, Password: 12345
+Además, para acceder como administrador:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Email: admin@mail.com, Password: admin123
+Este proyecto ha sido desplegado utilizando Docker en Google Cloud Platform (GCP), demostrando la viabilidad de construir y desplegar aplicaciones modernas en un entorno de producción.
 
+Créditos
+Este proyecto hace uso de la API de prueba proporcionada por Platzi. Todos los derechos de autor del contenido son propiedad de Disney.
 
-### NOTA:
-La API de autenticación es un api de pruebas y por ende no hace un hash del password como deberia hacerse, para esta prueba tecnica lo hice sí pero un TODO de mejora es implementar APIS que entreguen correctamente los objetos.
+Aclaración
+Este proyecto se desarrolló con fines educativos y de demostración. No tiene fines comerciales y no está afiliado con Disney de ninguna manera.
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Agradecemos tu interés en nuestro proyecto y esperamos que te brinde una visión práctica de las técnicas de desarrollo web moderno.

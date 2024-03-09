@@ -4,3 +4,5 @@ export * from './dashboard/DashboardPage';
 
 export * from './category/SingleCategoryPage';
 export * from './movies/SingleMoviePage';
+
+export * from './notFound/NotFoundPage';

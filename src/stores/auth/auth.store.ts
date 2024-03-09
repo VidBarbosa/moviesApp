@@ -3,8 +3,6 @@ import { devtools, persist } from 'zustand/middleware';
 import type { AuthStatus, User } from '@interfaces/index';
 import { AuthService } from '@services/auth.service';
 
-
-
 export interface AuthState {
 
   status: AuthStatus;

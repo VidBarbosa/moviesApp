@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from 'react-router-dom';
 import {
   IconHome,
   IconSearch,
@@ -15,7 +16,7 @@ export const HeaderMenu = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-40 flex items-center justify-between py-2 px-6 bg-black text-white">
-      <h1 className="text-2xl font-bold text-slate-600">Movies App</h1>
+      <Link to="/dashboard" className="text-2xl font-bold text-slate-600">Movies App</Link>
 
       <button
         onClick={() => setIsHeaderMenuOpen(!isHeaderMenuOpen)}
@@ -27,10 +28,10 @@ export const HeaderMenu = () => {
       <div className={menuClass}>
         <nav className={`md:mx-auto`}>
           <ul className="flex flex-col md:flex-row gap-4 items-center justify-center p-4">
-            <HeaderMenuItem icon={<IconHome size={20} />} label="Home" href="#" />
-            <HeaderMenuItem icon={<IconSearch size={20} />} label="Buscar" href="#search" />
-            <HeaderMenuItem icon={<IconDeviceTv size={20} />} label="Movies" href="#movies" />
-            <HeaderMenuItem icon={<IconUniverse size={20} />} label="Series" href="#series" />
+            <HeaderMenuItem icon={<IconHome size={20} />} label="Home" to="/dashboard" />
+            <HeaderMenuItem icon={<IconSearch size={20} />} label="Buscar" to="#search" />
+            <HeaderMenuItem icon={<IconDeviceTv size={20} />} label="Movies" to="/dashboard" />
+            <HeaderMenuItem icon={<IconUniverse size={20} />} label="Series" to="#series" />
           </ul>
         </nav>
       </div>

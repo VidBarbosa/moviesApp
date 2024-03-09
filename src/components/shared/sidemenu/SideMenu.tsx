@@ -21,7 +21,6 @@ interface SideMenuProps {
 
 const menuItems: MenuItem[] = [
   { title: "Dashboard", subTitle: "Todas las películas", href: "/dashboard" },
-  // Añade más items según sea necesario
 ];
 
 export const SideMenu: React.FC<SideMenuProps> = ({ isOpen, setIsOpen }) => {

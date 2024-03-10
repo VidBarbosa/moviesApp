@@ -143,9 +143,10 @@ Las contribuciones son lo que hacen a la comunidad de código abierto un lugar i
 
 ## Agradecimientos
 
-- [Img Shields](https://shields.io)
-- [Tabler Icons](https://tabler.io/icons)
+- [BeMaster](https://master.la/)
 - [Platzi Fake API](https://fakeapi.platzi.com/en/about/introduction/)
+- [Tabler Icons](https://tabler.io/icons)
+- [Img Shields](https://shields.io)
 
 <p align="right">(<a href="#readme-top">volver arriba</a>)</p>
 

@@ -1,0 +1,7 @@
+steps:
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: ['builds', 'submit', '--tag', 'gcr.io/first-scout-413023/moviesapp-service:$COMMIT_SHA']
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: ['run', 'deploy', 'moviesapp-service', '--image', 'gcr.io/first-scout-413023/moviesapp-service:$COMMIT_SHA', '--platform', 'managed', '--region', 'us-central1', '--allow-unauthenticated']
+images:
+- 'gcr.io/first-scout-413023/moviesapp-service:$COMMIT_SHA'

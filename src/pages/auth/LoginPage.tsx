@@ -23,9 +23,9 @@ export const LoginPage = () => {
   const emailInputClass = classNames(
     "w-full p-2 border-none rounded-md bg-[#12141c4a] text-white placeholder-gray-400",
     {
-      "bg-red-200 border-4 border-red-500 text-red-400":
+      "border-4 border-red-500 text-red-400":
         emailTouched && !validateEmail(email),
-      "bg-green-200 border-4 border-green-500 text-green-400":
+      "border-4 border-green-500 text-green-400":
         emailTouched && validateEmail(email),
     }
   );
@@ -33,9 +33,9 @@ export const LoginPage = () => {
   const passwordInputClass = classNames(
     "w-full p-2 border-none bg-[#12141c4a] text-white placeholder-gray-400",
     {
-      "bg-red-200 border-4 border-red-500 text-red-400":
+      "border-4 border-red-500 text-red-400":
         passwordTouched && !validatePassword(password),
-      "bg-green-200 border-4 border-green-500 text-green-400":
+      "border-4 border-green-500 text-green-400":
         passwordTouched && validatePassword(password),
     }
   );

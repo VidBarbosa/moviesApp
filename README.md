@@ -63,8 +63,8 @@ Para explorar **Movies App** localmente, sigue estos pasos sencillos.
 
 ### Prerequisitos
 
-- Node.js versión 14.x o superior
-- NPM o Yarn
+- Node.js versión 20.X o superior
+- NPM, PNPM o Yarn
 - NVM (recomendado para asegurar versión de Node) ver [documentación oficial](https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating)
 
 	```sh

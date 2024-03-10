@@ -1,10 +1,3 @@
-steps:
-  - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'gcr.io/first-scout-413023/moviesapp:$COMMIT_SHA', '.']
-  - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'gcr.io/first-scout-413023/moviesapp:$COMMIT_SHA']
-  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
-    entrypoint: gcloud
-    args: ['run', 'deploy', 'moviesapp-service', '--image', 'gcr.io/first-scout-413023/moviesapp:$COMMIT_SHA', '--region', 'us-central1', '--platform', 'managed', '--allow-unauthenticated']
-images:
-  - 'gcr.io/first-scout-413023/moviesapp:$COMMIT_SHA'
+AUTH_URL: https://api.escuelajs.co/api/v1
+PORT: 8080
+APP_VERSION: 0.0.1

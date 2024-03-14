@@ -64,7 +64,7 @@ Para explorar **Movies App** localmente, sigue estos pasos sencillos.
 ### Prerequisitos
 
 - Node.js versión 20.X o superior
-- NPM, PNPM o Yarn
+- NPM o PNPM
 - NVM (recomendado para asegurar versión de Node) ver [documentación oficial](https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating)
 
 	```sh
@@ -92,7 +92,7 @@ Para explorar **Movies App** localmente, sigue estos pasos sencillos.
 1. Clona el repositorio
 
    ```sh
-   git clone https://github.com/VidBarbosa/moviesApp.git
+   git clone https://EtrainingWebMaster@bitbucket.org/developers-projects/microsite_enventors.git
    ```
 
 2. Instala los paquetes NPM

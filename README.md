@@ -92,7 +92,7 @@ Para explorar **Movies App** localmente, sigue estos pasos sencillos.
 1. Clona el repositorio
 
    ```sh
-   git clone https://EtrainingWebMaster@bitbucket.org/developers-projects/microsite_enventors.git
+   git clone https://github.com/VidBarbosa/moviesApp.git
    ```
 
 2. Instala los paquetes NPM
